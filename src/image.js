@@ -55,7 +55,7 @@ exports.resize = (imageBucket, objectKey, width, height) => new Promise((resolve
             }, (err, output) => resizeCallback(err, output, resolve, reject));
         } else {
             im.resize({
-                width: width,
+                quality: width,
                 srcData: data.Body,
                 dstPath: resizedFile
             }, (err, output) => resizeCallback(err, output, resolve, reject));
